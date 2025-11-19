@@ -15,6 +15,10 @@ install: $(TARGET)
 	mkdir -p $(INSTALL_DIR)/usr/bin
 	install -m 0755 $(TARGET) $(INSTALL_DIR)/usr/bin/
 
+	@echo "Installing esme-gpio26-toggle into $(INSTALL_DIR)/etc/init.d"
+	mkdir -p $(INSTALL_DIR)/etc/init.d
+	install -m 0755 esme-gpio26-toggle $(INSTALL_DIR)/etc/init.d/
+
 clean:
 	rm -f $(TARGET) *.o
  
