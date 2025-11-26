@@ -12,14 +12,14 @@ TARGET = esme-gpio-toggle
 all: esme-gpio-toggle
 
 # Install target
-install: $(TARGET)
+install: $(TARGET) esme-gpio-toggle.sh
 	@echo "Installing $(TARGET) into $(INSTALL_DIR)/usr/bin"
 	mkdir -p $(INSTALL_DIR)/usr/bin
 	install -m 0755 esme-gpio-toggle $(INSTALL_DIR)/usr/bin/
 
 	@echo "Installing esme-gpio-toggle into $(INSTALL_DIR)/etc/init.d"
 	mkdir -p $(INSTALL_DIR)/etc/init.d
-	install -m 0755 esme-gpio26-toggle $(INSTALL_DIR)/etc/init.d/esme-gpio-toggle
+	install -m 0755 esme-gpio-toggle.sh $(INSTALL_DIR)/etc/init.d/
 
 # Clean target
 clean:
