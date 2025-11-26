@@ -9,7 +9,7 @@
 ### END INIT INFO
 
 DAEMON=/usr/bin/esme-gpio-toggle
-NAME=esme-gpio26-toggle
+NAME=esme-gpio-toggle
 PIDFILE=/var/run/${NAME}.pid
 GPIO_ID=26
 
@@ -55,3 +55,4 @@ case "$1" in
 esac
 
 exit 0
+INSTALL_DIR=${D}
