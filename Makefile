@@ -19,7 +19,7 @@ install: $(TARGET)
 
 	@echo "Installing esme-gpio-toggle into $(INSTALL_DIR)/etc/init.d"
 	mkdir -p $(INSTALL_DIR)/etc/init.d
-	install -m 0755 esme-gpio-toggle.sh $(INSTALL_DIR)/etc/init.d/
+	install -m 0755 esme-gpio-toggle.sh $(INSTALL_DIR)/etc/init.d/esme-gpio-toggle
 
 # Clean target
 clean:
